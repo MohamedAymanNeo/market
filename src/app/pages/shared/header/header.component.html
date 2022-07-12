@@ -1,8 +1,23 @@
-<ul>
-    <li>
-        <a [routerLink]="['/products']">products</a>
-    </li>
-    <li>
-        <a [routerLink]="['/cart']">cart</a>
-    </li>
-</ul>
+<ly-toolbar position="static" bg="primary" [elevation]="3">
+    <h6 [lyTyp]="'title'">Market</h6>
+    <ul class="navbar">
+        <li (click)="goTo('products')">
+            <span class="material-icons mr-2">
+                inventory
+            </span>
+            <span>
+                Products
+                <!-- <ly-badge bg="accent">11</ly-badge>           -->
+            </span> 
+        </li>
+        <li (click)="goTo('cart')">
+            <span class="material-icons mr-2">
+                shopping_cart
+            </span>
+            <span>
+                Cart
+                <!-- <ly-badge bg="accent">11</ly-badge>           -->
+            </span> 
+        </li>
+    </ul>
+  </ly-toolbar>

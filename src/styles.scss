@@ -1,1 +1,33 @@
 /* You can add global styles to this file, and also import other style files */
+
+.LyTabs-labels-e {
+    justify-content: center;
+}
+
+.b {
+    justify-content: space-around;
+}
+
+.navbar {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    li {
+        cursor: pointer;
+        margin-right: 30px;
+        display: flex;
+        align-items: center;
+        position: relative;
+        .material-icons {
+            margin-right: 8px;
+        }
+        .LyBadge--position-after-above-aa {
+            transform: translate(50%,-70%);
+        }
+    }
+}
+
+.products {
+    padding: 20px;
+}
