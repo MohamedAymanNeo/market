@@ -4,21 +4,21 @@
             <ly-card>
                 <ly-card-media
                   bgImg="{{item.image}}"
-                  title="Blue Mountains"
+                  title="{{item.title}}"
                 ></ly-card-media>
                 <ly-card-content>
-                  <h2 lyTyp="headline">Blue Mountains</h2>
+                  <h2 lyTyp="headline">{{item.title}}</h2>
                   <p lyTyp="body1">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae laboriosam ipsa animi alias rem.
+                    {{item.description}}
                   </p>
                 </ly-card-content>
                 <ly-card-actions >
-                  <button ly-button appearance="icon" color="accent">
-                    <!-- <ly-icon>favorite</ly-icon> -->
-                  </button>
-                  <button ly-button appearance="icon">
-                    <!-- <ly-icon>share</ly-icon> -->
-                  </button>
+                    <button class="addToCart">
+                        add To Cart
+                    </button>
+                    <span class="price">
+                        {{item.price}} $
+                    </span>
                 </ly-card-actions>
               </ly-card>
         </ly-grid>

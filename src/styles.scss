@@ -30,4 +30,45 @@
 
 .products {
     padding: 20px;
+    .LyCard-p {
+        // height: 500px;
+
+    }
+    .k-typ_58headline-u {
+        font-size: 1rem;
+        font-weight: 900;
+        margin-bottom: 10px;
+    }
+    .LyCard-actions-s {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .LyTypography-d {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    .price {
+        background-color: #2e2e2e;
+        border-radius: 50px;
+        color: #FFF;
+        padding: 5px 8px
+    }
+    .addToCart {
+        background-color: transparent;
+        color: #2e2e2e;
+        border: 1px solid #2e2e2e;
+        border-radius: 50px;
+        padding: 10px 15px;
+        font-weight: bold;
+        transition: all 0.7s ease-in-out;
+        &:hover {
+            cursor: pointer;
+            background-color: #2e2e2e;
+            color: #FFF;
+            border-color:#2e2e2e;
+
+        }
+    }
 }
