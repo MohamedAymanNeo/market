@@ -12,4 +12,10 @@ export class ProductsService {
   getAllProducts() {
     return this.http.get(environment.baseUrl + 'products')
   }
+  getAllCategories() {
+    return this.http.get(environment.baseUrl + 'products/categories')
+  }
+  getCategory(value: any) {
+    return this.http.get(environment.baseUrl + 'products/category/'+ value)
+  }
 }
