@@ -32,6 +32,11 @@
     padding: 20px;
     .LyCard-p {
         // height: 500px;
+        transform: translateY(0);
+        transition: all 0.3s ease-in-out;
+        &:hover {
+            transform: translateY(3px);
+        }
 
     }
     .k-typ_58headline-u {
