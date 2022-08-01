@@ -1,0 +1,25 @@
+<ly-card >
+    <ly-card-media
+      bgImg="{{data.image}}"
+      title="{{data.title}}"
+    ></ly-card-media>
+    <ly-card-content>
+      <h2  lyTyp="headline">
+        <!-- <a routerLink="['details', data.id]"> -->
+        <a>
+            {{data.title}}
+        </a>  
+        </h2>
+      <p lyTyp="body1">
+        {{data.description}}
+      </p>
+    </ly-card-content>
+    <ly-card-actions >
+        <button class="addToCart">
+            add To Cart
+        </button>
+        <span class="price">
+            {{data.price}} $
+        </span>
+    </ly-card-actions>
+  </ly-card>

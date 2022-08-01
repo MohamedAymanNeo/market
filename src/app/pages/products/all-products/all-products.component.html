@@ -1,34 +1,11 @@
 <div class="products">
   <ng-container *ngIf="!loader">
-    <div class="selectCateg">
-      <label for="">Categories:</label>
-      <select name="" id="categories" (change)="chooseCategory($event)">
-        <option value="all" selected>All</option>
-        <option value="{{option}}" *ngFor="let option of categories">{{option}}</option>
-      </select>
+    <div class="selectCateg" style="margin-bottom: 40px;">
+      <app-select [title]="'Categories'" [typeOfData]="categories" (selectedData)="chooseCategory($event)"></app-select>
     </div>
     <ly-grid container spacing="16 8@XSmall">
       <ly-grid item col="3 6@XSmall@Small" *ngFor="let item of products;let i as index">
-          <ly-card >
-              <ly-card-media
-                bgImg="{{item.image}}"
-                title="{{item.title}}"
-              ></ly-card-media>
-              <ly-card-content>
-                <h2 (click)="router.navigate(['details', item.id])" lyTyp="headline">{{item.title}}</h2>
-                <p lyTyp="body1">
-                  {{item.description}}
-                </p>
-              </ly-card-content>
-              <ly-card-actions >
-                  <button class="addToCart">
-                      add To Cart
-                  </button>
-                  <span class="price">
-                      {{item.price}} $
-                  </span>
-              </ly-card-actions>
-            </ly-card>
+          <app-product [data]="item"></app-product>
       </ly-grid>
     </ly-grid>
   </ng-container>

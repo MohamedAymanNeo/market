@@ -30,12 +30,14 @@ import {
 /** Import themes */
 import { MinimaLight, MinimaDark } from '@alyle/ui/themes/minima';
 import { HttpClientModule } from '@angular/common/http';
+import { SelectComponent } from './select/select.component';
 
 
 @NgModule({
   declarations: [
     HeaderComponent,
-    LoaderComponent
+    LoaderComponent,
+    SelectComponent
   ],
   imports: [
     CommonModule,
@@ -56,6 +58,7 @@ import { HttpClientModule } from '@angular/common/http';
   exports: [
     HeaderComponent,
     LoaderComponent,
+    SelectComponent,
     LyCommonModule,
     HammerModule,
     LyTabsModule,

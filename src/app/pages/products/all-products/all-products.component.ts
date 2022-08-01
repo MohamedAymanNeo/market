@@ -10,7 +10,7 @@ import { ProductsService } from '../services/products.service';
 })
 export class AllProductsComponent implements OnInit {
 
-  constructor(private prodServ: ProductsService, public router: Router) { }
+  constructor(private prodServ: ProductsService) { }
   products: any= []
   loader:boolean = false
   categories:string[] = [];
@@ -34,11 +34,15 @@ export class AllProductsComponent implements OnInit {
   chooseCategory(e:any) {
     this.loader = true
     let value = e.target.value;
+    (value == 'all') ? this.getProducts() : this.getProductsCategory(value);
+    console.log(e.target.value);
+  }
+
+  getProductsCategory(value: string) {
     this.prodServ.getCategory(value).subscribe((res: any) => {    
       this.products = res;
       this.loader = false
     })
-    console.log(e.target.value);
-    
   }
+
 }
